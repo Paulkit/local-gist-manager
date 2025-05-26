@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Target only form controls - more specific and focused approach */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+select,
+textarea {
+  color: #000000 !important; /* Solid black text */
+  background-color: #ffffff !important; /* Pure white background */
+  font-weight: 600 !important; /* Semi-bold font weight for better visibility */
+  border: 1px solid #d1d5db !important; /* Visible but not too heavy border */
+}
+
+/* Form control focus states */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+select:focus,
+textarea:focus {
+  color: #000000 !important; /* Keep text black when focused */
+  background-color: #ffffff !important; /* Keep white background when focused */
+  border-color: #3b82f6 !important; /* Blue border for focus indicator */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2) !important; /* Subtle focus glow */
+}
+
+/* Improve select option text visibility */
+select option {
+  color: #000000 !important; /* Solid black text for dropdown options */
+  font-weight: 600 !important; /* Semi-bold for better readability */
+  background-color: #ffffff !important; /* White background */
+  padding: 4px 8px !important; /* Add some padding for better readability */
+}
+
+/* Target specific components that need extra help */
+.text-slate-900 {
+  color: #000000 !important;
+}
+
+/* Override any text-slate classes */
+[class*="text-slate-"] {
+  color: #000000 !important;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="search"]::placeholder,
+textarea::placeholder {
+  color: #6b7280 !important; /* Medium gray for placeholders */
+  opacity: 1 !important;
+}
+
+/* Dark mode adjustments - more targeted approach */
+@media (prefers-color-scheme: dark) {
+  /* Target only form controls in dark mode */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  select,
+  textarea {
+    color: #000000 !important; /* Black text for visibility */
+    background-color: #f0f0f0 !important; /* Light gray background for contrast */
+    border-color: #666666 !important; /* Darker border for definition */
+  }
+  
+  /* Form control focus states in dark mode */
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  input[type="search"]:focus,
+  select:focus,
+  textarea:focus {
+    color: #000000 !important; /* Black text when focused for maximum visibility */
+    background-color: #ffffff !important; /* White background for contrast */
+    border-color: #3b82f6 !important; /* Blue border for focus indicator */
+  }
+  
+  select option {
+    color: #000000 !important; /* Black text for dropdown options */
+    font-weight: 600 !important; /* Semi-bold for better readability */
+    background-color: #ffffff !important; /* White background for dropdown options */
+  }
+  
+  input[type="text"]::placeholder,
+  input[type="email"]::placeholder,
+  input[type="password"]::placeholder,
+  input[type="search"]::placeholder,
+  textarea::placeholder {
+    color: #9ca3af !important; /* Lighter gray for dark mode placeholders */
+  }
+}

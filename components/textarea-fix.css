@@ -1,0 +1,11 @@
+/* Specific style overrides for textareas in our components */
+textarea {
+  color: black !important;
+  background-color: white !important;
+  font-weight: 600 !important;
+}
+
+/* Fix for GistItem textarea */
+textarea.text-slate-900 {
+  color: black !important;
+}

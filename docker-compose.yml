@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  gist-manager:
+    image: paulkit41/local-gist-manager
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_GITHUB_TOKEN=YOUR_TOKEN # Optional: You may leave this as is and configure the token directly on the page.
+    restart: unless-stopped
