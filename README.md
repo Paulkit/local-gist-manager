@@ -4,6 +4,7 @@ A modern, minimal Next.js app for managing your GitHub Gists locally with a beau
 
 <img src="public/enter-token.png" alt="token page" />
 <img src="public/gist_page.png" alt="gist page" />
+<img src="public/codebase.png" alt="codebase tutorial page" />
 
 > **⚠️ Suggestion:**
 > This project is for local use and experimentation. I advise you **not to deploy it on the public Internet**—just play with it on your local machine. :)
