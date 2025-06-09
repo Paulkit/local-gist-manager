@@ -10,6 +10,30 @@ A modern, minimal Next.js app for managing your GitHub Gists locally with a beau
 > This project is for local use and experimentation. I advise you **not to deploy it on the public Internet**—just play with it on your local machine. :)
 
  
+## 🏆 Best Practices for Using Local Gist Manager
+
+This project is designed for local experimentation. To use it securely and effectively, please follow these best practices:
+
+1. **Create a New Personal Access Token (Classic) with Least Privilege**  
+   Generate your GitHub token at [https://github.com/settings/tokens/new](https://github.com/settings/tokens/new) by selecting **Personal Access Tokens (classic)**.  
+   - Give it a descriptive name.  
+   - Set an expiration date to enhance security.  
+   - **Select only the `gist` checkbox with "Create gists" permission** to follow the principle of least privilege.  
+   - Copy the token; you won’t be able to see it again after leaving the page.
+
+2. **Do Not Store Credentials or Sensitive Data in Your Gists**  
+   Avoid placing any personal credentials, tokens, or sensitive information inside your gists to prevent accidental exposure.
+
+3. **Use the App Locally and Avoid Public Deployment**  
+   Since the app manages your GitHub token, it is safer to run it locally or on trusted private environments like Cloudflare Pages with proper environment variable configurations.
+
+4. **Manage Your Token Securely**  
+   Use the app’s token management feature to set or clear your token as needed. Never commit your token to version control or share it publicly.
+
+By adhering to these practices, you minimize security risks and ensure a smooth, secure experience managing your GitHub Gists locally.
+
+
+
 ---
 
 ## 📚 One-day Complete Project Series
@@ -25,7 +49,7 @@ A modern, minimal Next.js app for managing your GitHub Gists locally with a beau
 | 🔑 Token Management    | Easily set or clear your GitHub token from the header                        |
 | 💡 Codebase Tutorial   | Quick access to a codebase walkthrough with a single click                   |
 | 🎨 Modern UI           | Responsive, accessible, and visually appealing design                        |
-| ☁️ Cloudflare Ready    | Optimized for Cloudflare Pages, no Node.js built-in dependencies required     |
+| ☁️ Cloudflare Ready (Optional)    | Optimized for Cloudflare Pages, no Node.js built-in dependencies required     |
 
 ---
 
@@ -84,10 +108,10 @@ docker run -d -p 3000:3000 -e NEXT_PUBLIC_GITHUB_TOKEN=your_github_token paulkit
 
 ---
 
-## 🌐 Deployment on Cloudflare Pages
+## 🌐 Deployment on Cloudflare Pages (Optional)
 
-1. Push to your GitHub repo.
-2. Connect the repo to Cloudflare Pages.
+1. Fork this repo / Download files manually.
+2. Connect the repo to Cloudflare Pages / Use direct upload.
 3. Set build command:  
    `npm run build && npx @cloudflare/next-on-pages`
 4. Set output directory:  
