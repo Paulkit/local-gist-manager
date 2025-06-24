@@ -9,16 +9,16 @@ A modern, minimal Next.js app for managing your GitHub Gists locally with a beau
 > **⚠️ Suggestion:**
 > This project is for local use and experimentation. I advise you **not to deploy it on the public Internet**—just play with it on your local machine. :)
 
- 
 ## 🏆 Best Practices for Using Local Gist Manager
 
 This project is designed for local experimentation. To use it securely and effectively, please follow these best practices:
 
 1. **Create a New Personal Access Token (Classic) with Least Privilege**  
-   Generate your GitHub token at [https://github.com/settings/tokens/new](https://github.com/settings/tokens/new) by selecting **Personal Access Tokens (classic)**.  
-   - Give it a descriptive name.  
-   - Set an expiration date to enhance security.  
-   - **Select only the `gist` checkbox with "Create gists" permission** to follow the principle of least privilege.  
+   Generate your GitHub token at [https://github.com/settings/tokens/new](https://github.com/settings/tokens/new) by selecting **Personal Access Tokens (classic)**.
+
+   - Give it a descriptive name.
+   - Set an expiration date to enhance security.
+   - **Select only the `gist` checkbox with "Create gists" permission** to follow the principle of least privilege.
    - Copy the token; you won’t be able to see it again after leaving the page.
 
 2. **Do Not Store Credentials or Sensitive Data in Your Gists**  
@@ -32,24 +32,21 @@ This project is designed for local experimentation. To use it securely and effec
 
 By adhering to these practices, you minimize security risks and ensure a smooth, secure experience managing your GitHub Gists locally.
 
-
-
 ---
 
 ## 📚 One-day Complete Project Series
 
-
 ## ✨ Features
 
-| Feature                | Description                                                                 |
-|------------------------|-----------------------------------------------------------------------------|
-| 🗂️ Gist List           | View all your GitHub Gists in a clean, sortable list                         |
-| 📄 Multi-file Support  | See all files in a gist by default, with syntax highlighting                  |
-| 📝 Create/Edit/Delete  | Full CRUD for your Gists (with GitHub token)                                 |
-| 🔑 Token Management    | Easily set or clear your GitHub token from the header                        |
-| 💡 Codebase Tutorial   | Quick access to a codebase walkthrough with a single click                   |
-| 🎨 Modern UI           | Responsive, accessible, and visually appealing design                        |
-| ☁️ Cloudflare Ready (Optional)    | Optimized for Cloudflare Pages, no Node.js built-in dependencies required     |
+| Feature                        | Description                                                               |
+| ------------------------------ | ------------------------------------------------------------------------- |
+| 🗂️ Gist List                   | View all your GitHub Gists in a clean, sortable list                      |
+| 📄 Multi-file Support          | See all files in a gist by default, with syntax highlighting              |
+| 📝 Create/Edit/Delete          | Full CRUD for your Gists (with GitHub token)                              |
+| 🔑 Token Management            | Easily set or clear your GitHub token from the header                     |
+| 💡 Codebase Tutorial           | Quick access to a codebase walkthrough with a single click                |
+| 🎨 Modern UI                   | Responsive, accessible, and visually appealing design                     |
+| ☁️ Cloudflare Ready (Optional) | Optimized for Cloudflare Pages, no Node.js built-in dependencies required |
 
 ---
 
@@ -67,10 +64,9 @@ npm run build && npx @cloudflare/next-on-pages
 ```
 
 > **Reminder:**
+>
 > - In Cloudflare Pages, set the environment variable `NODE_VERSION` to at least `18.18.0`.
 > - Set Compatibility flags: `nodejs_compat`.
-
-
 
 ---
 
@@ -93,11 +89,11 @@ docker run -d -p 3000:3000 -e NEXT_PUBLIC_GITHUB_TOKEN=your_github_token paulkit
 
 ## 🛠️ Tech Stack
 
-- [Next.js 15+](https://nextjs.org/)  
-- [React 19](https://react.dev/)  
-- [Tailwind CSS 4](https://tailwindcss.com/)  
-- [Cloudflare Pages](https://pages.cloudflare.com/)  
-- [Lucide Icons](https://lucide.dev/icons/)  
+- [Next.js 15+](https://nextjs.org/)
+- [React 19](https://react.dev/)
+- [Tailwind CSS 4](https://tailwindcss.com/)
+- [Cloudflare Pages](https://pages.cloudflare.com/)
+- [Lucide Icons](https://lucide.dev/icons/)
 
 ---
 
@@ -122,4 +118,3 @@ docker run -d -p 3000:3000 -e NEXT_PUBLIC_GITHUB_TOKEN=your_github_token paulkit
 ## 📦 License
 
 MIT
-
